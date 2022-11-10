@@ -27,9 +27,9 @@ class CardController {
     };
 
     checkValidation = (req) => {
-        const errors = validationResult(req)
+        const errors = validationResult(req);
         if (!errors.isEmpty()) {
-            throw new HttpException(422, 'Validation faild', errors);
+            throw new HttpException(422, 'Validation failed', errors);
         }
     }
 }

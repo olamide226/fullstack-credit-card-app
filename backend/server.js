@@ -8,9 +8,16 @@ const cardsRouter = require('./routes/cards.route');
 const app = express();
 
 
+app.use((req, res, next)=> {
+    // little hack for my browser
+    req.headers['content-type'] = 'application/json';
+    next();
+})
 // parse requests of content-type: application/json
 // parses incoming requests with JSON payloads
 app.use(express.json());
+app.use(express.urlencoded({ extended: true}));
+
 // enabling cors for all requests by using cors middleware
 app.use(cors());
 // Enable pre-flight

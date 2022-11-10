@@ -7,26 +7,26 @@ exports.createCardSchema = [
         .exists()
         .withMessage('Your name is required')
         .isLength({ min: 3 })
-        .withMessage('Must be at least 3 chars long'),
+        .withMessage('Your name must be at least 3 chars long'),
     body('card_no')
         .exists()
         .withMessage('Your card number is required')
         .isNumeric()
-        .withMessage('Must be only numeric chars')
+        .withMessage('Your card number must be only numeric chars')
         .isLength({ max: 19 })
-        .withMessage('Must be at most 19 chars long')
+        .withMessage('Your card number must be at most 19 chars long')
         .custom(luhn_validate)
-        .withMessage("Card number is invalid"),
+        .withMessage("Your card number is invalid"),
     body('limit')
         .exists()
         .withMessage('limit is required')
         .isNumeric()
-        .withMessage('Must be only numeric chars'),
+        .withMessage('limit must be only numeric chars'),
     body()
         .custom(value => {
             return !!Object.keys(value).length;
         })
-        .withMessage('Please provide required fields')
+        .withMessage('Please provide all required fields')
         .custom(value => {
             const updates = Object.keys(value);
             const allowUpdates = ['name', 'card_no', 'limit'];
