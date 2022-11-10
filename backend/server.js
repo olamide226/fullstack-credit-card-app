@@ -2,11 +2,12 @@ const express = require("express");
 const cors = require("cors");
 const HttpException = require('./utils/HttpException.utils');
 const errorMiddleware = require('./middleware/error.middleware');
+const cardsRouter = require('./routes/cards.route');
 
 // Init express
 const app = express();
-// Init environment
-dotenv.config();
+
+
 // parse requests of content-type: application/json
 // parses incoming requests with JSON payloads
 app.use(express.json());
@@ -15,9 +16,9 @@ app.use(cors());
 // Enable pre-flight
 app.options("*", cors());
 
-const port = 5000;
+const port = 5009;
 
-app.get(`/api/cards`, (req, res) => res.send({"I Am":"Alive"}));
+app.use(`/api/cards`, cardsRouter);
 
 // 404 error
 app.all('*', (req, res, next) => {
