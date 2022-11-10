@@ -1,0 +1,22 @@
+{
+  "name": "credit_card_app",
+  "version": "1.0.0",
+  "description": "simple fullstack application",
+  "main": "backend/server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olamide226/credit-card-app.git"
+  },
+  "author": "olamideadebayo2001@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olamide226/credit-card-app/issues"
+  },
+  "homepage": "https://github.com/olamide226/credit-card-app#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
