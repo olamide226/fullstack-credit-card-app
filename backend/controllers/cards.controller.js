@@ -16,12 +16,7 @@ class CardController {
     createCard = async (req, res, next) => {
         this.checkValidation(req);
 
-
         const result = CardModel.create({...req.body});
-
-        if (!result) {
-            throw new HttpException(500, 'Something went wrong');
-        }
 
         return res.status(201).send(result);
     };
