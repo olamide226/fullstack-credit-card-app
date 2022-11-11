@@ -19,6 +19,7 @@ class App extends Component {
         <div className="mt-3">
           <Routes>
             <Route path="/" element={<CardsList/>} />
+            <Route path="/cards" element={<CardsList/>} />
           </Routes>
         </div>
       </div>
