@@ -23,8 +23,6 @@ app.use(cors());
 // Enable pre-flight
 app.options("*", cors());
 
-const port = 5009;
-
 app.use(`/api/cards`, cardsRouter);
 
 // 404 error
