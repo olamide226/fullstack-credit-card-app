@@ -2,8 +2,8 @@
   "name": "credit_card_app",
   "version": "1.0.0",
   "description": "simple fullstack application",
-  "main": "backend/server.js",
   "scripts": {
+    "start": "node backend/server.js",
     "test": "jest ./backend/tests --silent --coverage"
   },
   "repository": {
