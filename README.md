@@ -29,4 +29,16 @@ npm run start # Starts on port 3000
 npm run build
 ```
 
+## Backend Endpoints
+*It runs on port 5555*
+- POST /api/cards
+```
+{
+    "name": "John Doe",
+    "card_no": 123456789098765,
+    "limit": 2000
+}
+```
+- GET /api/cards
+
 
